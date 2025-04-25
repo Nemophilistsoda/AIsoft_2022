@@ -1,0 +1,18 @@
+model:
+  input_shape: [64, 64, 3]
+  conv_layers:
+    filters: [8, 16, 32]  # 2^(3)=8, 2^(4)=16, 2^(5)=32
+    kernel_size: [3, 3]
+    activation: relu
+    pool_size: [2, 2]
+  dense:
+    units: [128, 1]
+    activation: [relu, relu]
+training:
+  optimizer: adam
+  loss: mean_squared_error
+  metrics: [accuracy]
+compilation:
+  epochs: 10
+  batch_size: 32
+  verbose: 1

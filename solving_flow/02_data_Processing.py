@@ -47,3 +47,4 @@ with open(output_file_path, 'w', encoding = 'utf-8') as f:
     for result in results:
         f.write(result + '\n')
 print("结果已写入文件")
+
